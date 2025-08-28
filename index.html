@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Raymond Grennbo">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta property="og:site_name" content="Portfolio of Raymond Grennbo">
+    <meta property="og:image" content="">
+    <meta property="og:type" content="website"/>
+    <meta name="keywords" content="Raymond Grennbo's Portfolio. Briefly summarize your experience, skills, and impact in 1-2 sentences.">
+    <meta name="description" content="Explore the portfolio of Raymond Grennbo. Briefly summarize your experience, skills, and impact in 1-2 sentences. - Discover more.">
+    <meta name="twitter:description" content="Raymond Grennbo's Portfolio. Briefly summarize your experience, skills, and impact in 1-2 sentences.">
+    <link rel="canonical" href="http://localhost:8000/portfolio/44/deploy">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:title" content="Raymond Grennbo | Project Manager">
+    <meta name="twitter:title" content="Raymond Grennbo | Project Manager">
+    <meta name="twitter:image" content="">
+
+    
+    <title>Raymond Grennbo | Project Manager | Portfolio</title>
+
+    <!-- Theme CSS - LOAD ORDER IS CRUCIAL -->
+            <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/tailwind.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/template.css" rel="stylesheet">
+        <link href="css/app.css" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-black: #0a0a0a;
+            --primary-white: #ffffff;
+            --light-gray: #f8fafc;
+            --text-gray: #64748b;
+            --border-gray: #e2e8f0;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--primary-black);
+            line-height: 1.7;
+            background: var(--primary-white);
+        }
+
+        .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        /* Enhanced Header */
+        .main-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-gray);
+            transition: all 0.3s ease;
+        }
+
+        .fixed-header .main-header {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Hero Section Improvements */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        /* Enhanced Typography */
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            font-weight: 800;
+            line-height: 0.9;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, var(--primary-black) 0%, #374151 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 600;
+            color: var(--accent-blue);
+            margin-top: 1rem;
+        }
+
+        /* Enhanced Cards */
+        .modern-card {
+            background: var(--primary-white);
+            border: 1px solid var(--border-gray);
+            border-radius: 24px;
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modern-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .modern-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            border-color: var(--accent-blue);
+        }
+
+        .modern-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        /* Enhanced Skills Section */
+        .skill-pill {
+            background: linear-gradient(135deg, var(--light-gray) 0%, #e2e8f0 100%);
+            border: 1px solid var(--border-gray);
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-pill::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .skill-pill:hover {
+            background: var(--primary-white);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+            border-color: var(--accent-blue);
+        }
+
+        .skill-pill:hover::before {
+            left: 100%;
+        }
+
+        /* Enhanced Project Cards */
+        .project-card {
+            background: var(--primary-white);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 1px solid var(--border-gray);
+            height: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .project-card:hover .project-image {
+            transform: scale(1.05);
+        }
+
+        /* Enhanced Buttons */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-black) 0%, #374151 100%);
+            color: var(--primary-white);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            color: var(--primary-white);
+            text-decoration: none;
+        }
+
+        .btn-secondary {
+            background: var(--primary-white);
+            color: var(--primary-black);
+            border: 2px solid var(--primary-black);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-black);
+            color: var(--primary-white);
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+
+        /* Section Spacing */
+        .section-padding {
+            padding: 8rem 0;
+        }
+
+        /* Enhanced Navigation */
+        .nav-link {
+            font-weight: 500;
+            color: var(--text-gray);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-blue);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-black);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Notification Bar Improvements */
+        .notification-bar {
+            background: linear-gradient(135deg, var(--primary-black) 0%, #374151 100%);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive Improvements */
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 4rem 0;
+            }
+            
+            .modern-card {
+                padding: 1.5rem;
+            }
+            
+            .hero-section {
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+        }
+
+        /* Loading Animation */
+        .loading-overlay {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Smooth Animations */
+        * {
+            scroll-behavior: smooth;
+        }
+
+        /* Enhanced Image Styling */
+        .profile-image {
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Enhanced Footer */
+        .footer {
+            background: var(--light-gray);
+            border-top: 1px solid var(--border-gray);
+        }
+    </style>
+</head>
+
+<body>
+    
+    
+    <!-- Enhanced Header -->
+    <header class="main-header fixed top-0 left-0 right-0 z-40">
+        <nav class="navbar navbar-expand-md">
+            <div class="container mx-auto px-6">
+                <button class="navbar-toggler md:hidden" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse-toggle">
+                    <span class="block w-6 h-0.5 bg-gray-600 mb-1"></span>
+                    <span class="block w-6 h-0.5 bg-gray-600 mb-1"></span>
+                    <span class="block w-6 h-0.5 bg-gray-600"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse-toggle">
+                    <ul class="navbar-nav flex space-x-8">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        
+                                                <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        
+                                                <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        
+                                                <li class="nav-item">
+                            <a class="nav-link" href="#experience">Experience</a>
+                        </li>
+                        
+                                                <li class="nav-item">
+                            <a class="nav-link" href="#education">Education</a>
+                        </li>
+                        
+                                                <li class="nav-item">
+                            <a class="nav-link" href="#references">References</a>
+                        </li>
+                        
+                                                <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                                            </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Enhanced Hero Section -->
+    <section id="home" class="hero-section relative">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-screen py-20">
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <h1 class="hero-title font-display">
+                            Raymond<br>
+                            Grennbo
+                        </h1>
+                        <p class="hero-subtitle font-display">Project Manager</p>
+                    </div>
+                    
+                    <p class="text-xl text-gray-600 max-w-lg leading-relaxed">
+                        Briefly summarize your experience, skills, and impact in 1-2 sentences.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#about" class="btn-primary">
+                            Learn More About Me
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                            </svg>
+                        </a>
+                        
+                                                <a href="assets/1qOGj4pGJNBl2SSeP2LTbidkK65vbI0MKXgvTmLi.pdf" 
+                           target="_blank" class="btn-secondary">
+                            Download Resume
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                        </a>
+                                            </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="relative max-w-lg mx-auto">
+                        <img src="http://localhost:8000/storage/portfolio_assets/1756389159_68b05f275c226.jpg"
+                             alt="Raymond"
+                             class="profile-image w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Skills Section -->
+            
+    <section id="skills" class="section-padding bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-display font-bold mb-6">
+                    <span class="gradient-text">Skills</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Technologies and expertise I bring to every project
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                                <div class="skill-pill">
+                    1
+                </div>
+                                <div class="skill-pill">
+                    2
+                </div>
+                                <div class="skill-pill">
+                    3
+                </div>
+                                <div class="skill-pill">
+                    4
+                </div>
+                                <div class="skill-pill">
+                    5
+                </div>
+                                <div class="skill-pill">
+                    6
+                </div>
+                            </div>
+        </div>
+    </section>
+    
+    <!-- Enhanced About Section -->
+    <section id="about" class="section-padding bg-gray-50">
+        <div class="container mx-auto px-6">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <img src="http://localhost:8000/storage/portfolio_assets/1756389185_68b05f410becb.jpg"
+                         alt="Raymond"
+                         class="profile-image w-full h-auto">
+                </div>
+                
+                <div class="order-1 lg:order-2 space-y-8">
+                    <div>
+                        <h2 class="text-5xl md:text-6xl font-display font-bold mb-6">
+                            About <span class="gradient-text">Me</span>
+                        </h2>
+                        <p class="text-2xl text-gray-700 font-medium mb-6">
+                            Hi, I'm Raymond. Project Manager based in Los Angeles, California.
+                        </p>
+                    </div>
+                    
+                    <div class="prose prose-lg text-gray-600">
+                        Customize your About Me section. Add a personal introduction, location, and optional image. You can also choose to display a contact button or upload your resume.
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                                                <a href="assets/1qOGj4pGJNBl2SSeP2LTbidkK65vbI0MKXgvTmLi.pdf" 
+                           target="_blank" class="btn-primary">
+                            Download Resume
+                        </a>
+                                                
+                                                <a href="mailto:dnlbellfield@gmail.com" class="btn-secondary">
+                            Contact Me
+                        </a>
+                                            </div>
+                </div>
+            </div>
+                    </div>
+    </section>
+
+    <!-- Enhanced Work Experience Section -->
+        <section id="experience" class="section-padding bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-display font-bold mb-6">
+                    Work <span class="gradient-text">Experience</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    My professional journey and key accomplishments
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto space-y-8">
+                                                <div class="modern-card">
+                    <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Front-End Developer</h3>
+                            <h4 class="text-xl font-semibold text-blue-600 mb-2">Star Moon</h4>
+                        </div>
+                        <span class="text-gray-500 font-medium">May 2022 - Present</span>
+                    </div>
+                    
+                                        <div class="prose prose-gray max-w-none">
+                        <ul class="space-y-2">
+                                                        <li class="text-gray-600">Customize your About Me section. Add a personal introduction, location, and optional image. You can also choose to display a contact button or upload your resume.</li>
+                                                    </ul>
+                    </div>
+                                    </div>
+                                                                <div class="modern-card">
+                    <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Event Coordinator</h3>
+                            <h4 class="text-xl font-semibold text-blue-600 mb-2">Peak Performance Logistics, Los Angeles, CA</h4>
+                        </div>
+                        <span class="text-gray-500 font-medium">2014 – 2018</span>
+                    </div>
+                    
+                                        <div class="prose prose-gray max-w-none">
+                        <ul class="space-y-2">
+                                                        <li class="text-gray-600">Customize your About Me section. Add a personal introduction, location, and optional image. You can also choose to display a contact button or upload your resume.</li>
+                                                    </ul>
+                    </div>
+                                    </div>
+                                                                            </div>
+        </div>
+    </section>
+    
+    <!-- Enhanced Education Section -->
+        <section id="education" class="section-padding bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-display font-bold mb-6">
+                    <span class="gradient-text">Education</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Academic background and continuous learning
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto space-y-8">
+                                                <div class="modern-card">
+                    <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Master of Business Administration (MBA)</h3>
+                            <h4 class="text-xl font-semibold text-blue-600 mb-2">California State University Dominguez Hills</h4>
+                        </div>
+                        <span class="text-gray-500 font-medium">2017</span>
+                    </div>
+                    
+                                        <p class="text-gray-600 leading-relaxed">Customize your About Me section. Add a personal introduction, location, and optional image. You can also choose to display a contact button or upload your resume.</p>
+                                    </div>
+                                                                                                            </div>
+        </div>
+    </section>
+    
+    <!-- Enhanced References Section -->
+        <section id="references" class="section-padding bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-display font-bold mb-6">
+                    <span class="gradient-text">References</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    What colleagues and clients say about working with me
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto space-y-8">
+                                <div class="modern-card text-center">
+                    <div class="mb-6">
+                        <svg class="w-12 h-12 text-blue-500 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                        </svg>
+                    </div>
+                    <blockquote class="text-xl text-gray-700 italic mb-6 leading-relaxed">
+                        "Customize your About Me section. Add a personal introduction, location, and optional image. You can also choose to display a contact button or upload your resume."
+                    </blockquote>
+                    <cite class="text-gray-600 font-semibold">John Doe, Senior Developer at Tech Solutions</cite>
+                </div>
+                
+                                <div class="modern-card text-center">
+                    <div class="mb-6">
+                        <svg class="w-12 h-12 text-blue-500 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                        </svg>
+                    </div>
+                    <blockquote class="text-xl text-gray-700 italic mb-6 leading-relaxed">
+                        "Customize your About Me section. Add a personal introduction, location, and optional image. You can also choose to display a contact button or upload your resume."
+                    </blockquote>
+                    <cite class="text-gray-600 font-semibold">Jane Smith, Project Manager at Innovate Inc.</cite>
+                </div>
+                
+                                <div class="modern-card text-center">
+                    <div class="mb-6">
+                        <svg class="w-12 h-12 text-blue-500 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                        </svg>
+                    </div>
+                    <blockquote class="text-xl text-gray-700 italic mb-6 leading-relaxed">
+                        "Customize your About Me section. Add a personal introduction, location, and optional image. You can also choose to display a contact button or upload your resume."
+                    </blockquote>
+                    <cite class="text-gray-600 font-semibold">Emily Thompson</cite>
+                </div>
+                            </div>
+        </div>
+    </section>
+    
+    <!-- Enhanced Projects Section -->
+        <section id="projects" class="section-padding bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-display font-bold mb-6">
+                    Featured <span class="gradient-text">Projects</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    A showcase of my recent work and creative solutions
+                </p>
+            </div>
+
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <div class="project-card group">
+                                        <div class="overflow-hidden">
+                        <img src="http://localhost:8000/storage/portfolio_assets/1756389262_68b05f8e10b73.jpg" 
+                             alt="Portfolio Project: Stellar Marketing Agency Website" 
+                             class="project-image">
+                    </div>
+                                        
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                            Portfolio Project: Stellar Marketing Agency Website
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Customize your About Me section. Add a personal introduction, location, and optional image. You can also choose to display a contact button or upload your resume.
+                        </p>
+                    </div>
+                </div>
+                                <div class="project-card group">
+                                        <div class="overflow-hidden">
+                        <img src="http://localhost:8000/storage/portfolio_assets/1756389262_68b05f8e111e8.jpg" 
+                             alt="E-Commerce Site: GreenEco Online Store" 
+                             class="project-image">
+                    </div>
+                                        
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                            E-Commerce Site: GreenEco Online Store
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Customize your About Me section. Add a personal introduction, location, and optional image. You can also choose to display a contact button or upload your resume.
+                        </p>
+                    </div>
+                </div>
+                                <div class="project-card group">
+                                        <div class="overflow-hidden">
+                        <img src="http://localhost:8000/storage/portfolio_assets/1756389262_68b05f8e11410.jpg" 
+                             alt="Interactive Web App: Event Planner Dashboard" 
+                             class="project-image">
+                    </div>
+                                        
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                            Interactive Web App: Event Planner Dashboard
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Customize your About Me section. Add a personal introduction, location, and optional image. You can also choose to display a contact button or upload your resume.
+                        </p>
+                    </div>
+                </div>
+                            </div>
+        </div>
+    </section>
+    
+    <!-- Enhanced Footer -->
+    <footer class="footer py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                    Raymond Grennbo
+                </h3>
+                <p class="text-gray-600">Project Manager</p>
+            </div>
+            
+                        <div class="mb-8">
+                <a href="mailto:dnlbellfield@gmail.com" class="btn-primary">
+                    Get In Touch
+                </a>
+            </div>
+                        
+            <div class="border-t border-gray-200 pt-8">
+                <p class="text-gray-500">
+                    &copy; 2025 Raymond Grennbo. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+            <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/jquery.appear.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/scrollIt.min.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Smooth scrolling for navigation links
+            const navLinks = document.querySelectorAll(".nav-link");
+            navLinks.forEach(function (link) {
+                link.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const targetId = link.getAttribute("href");
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerHeight = document.querySelector('.main-header').offsetHeight;
+                        const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+
+            // Header scroll effect
+            const header = document.querySelector('.main-header');
+            window.addEventListener("scroll", function () {
+                if (window.scrollY >= 100) {
+                    document.body.classList.add("fixed-header");
+                } else {
+                    document.body.classList.remove("fixed-header");
+                }
+            });
+
+            // Show notification bar for preview
+            
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements for animation
+            document.querySelectorAll('.modern-card, .project-card, .skill-pill').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
